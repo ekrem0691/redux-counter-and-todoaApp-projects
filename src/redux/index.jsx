@@ -1,40 +1,24 @@
-import { DECREMENT, INCREMENT, RESET } from "./types/counterTypes";
+// import { DECREMENT, INCREMENT, RESET } from "./types/counterTypes";
 
-const initialState = {
-  counter: 0,
-};
+// const initialState = {
+//   counter: 0,
+// };
 
-//? reducer fonksiyonu içindeki "state" değişkeni bütün stateler anlamına geldiği için state.counter diyerek statelerin  içerisindeki counter statesine ulaşıp manüpüle etmiş olduk...
+// //? reducer fonksiyonu içindeki "state" değişkeni bütün stateler anlamına geldiği için state.counter diyerek statelerin  içerisindeki counter statesine ulaşıp manüpüle etmiş olduk...
 
-const reducer = (state = initialState, action) => {
-  switch (action.type) {
-    case INCREMENT:
-      return { counter: state.counter + 1 };
-    case DECREMENT:
-      return { counter: state.counter - 1 };
-    case RESET:
-      return { counter: 0 };
-    default:
-      return state;
-  }
-};
-export default reducer;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// const reducer = (state = initialState, action) => {
+//   switch (action.type) {
+//     case INCREMENT:
+//       return { counter: state.counter + 1 };
+//     case DECREMENT:
+//       return { counter: state.counter - 1 };
+//     case RESET:
+//       return { counter: 0 };
+//     default:
+//       return state;
+//   }
+// };
+// export default reducer;
 
 
 
@@ -60,6 +44,33 @@ export default reducer;
 //   }
 // };
 // export default reducer;
+
+ 
+
+
+import { createStore, combineReducers } from "redux";
+import counterReducer from "./reducers/counterReducer";
+import todoReducer from "./reducers/todoReducers";
+
+const rootReducer = combineReducers({
+
+  counterReducer: counterReducer,
+  todoReducer: todoReducer,
+
+})
+
+ 
+
+
+
+
+
+
+
+
+
+
+
 
 // import { createStore, combineReducers } from 'redux';
 // import counterReducer from './reducers/counterReducer';
