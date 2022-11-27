@@ -4,20 +4,19 @@ const initialState = {
 
 //? reducer fonksiyonu içindeki "state" değişkeni bütün stateler anlamına geldiği için state.counter diyerek statelerin  içerisindeki counter statesine ulaşıp manüpüle etmiş olduk...
 
-const reducer = (state = initialState, action) = {
+const reducer = (state = initialState, action) => {
   switch (action.type) {
     case "INCREMENT":
-      return{counter: state.counter + 1 }
+      return { counter: state.counter + 1 };
     case "DECREMENT":
-      return{counter: state.counter - 1 }
+      return { counter: state.counter - 1 };
     case "RESET":
-      return{counter: 0 }
-
+      return { counter: 0 };
     default:
       return state;
   }
-}
-
+};
+export default reducer;
 
 
 
@@ -66,7 +65,8 @@ const reducer = (state = initialState, action) = {
 
 // const rootReducer = combineReducers({
 //   counterRed: counterReducer,
-//   todoRed: todoReducer,
+// todoRed: todoReducer,
+
 // });
 
 // export const getStore = () => {
