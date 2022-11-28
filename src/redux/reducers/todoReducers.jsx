@@ -1,34 +1,35 @@
-import { ADD_TODO } from "../types/todoTypes"
-
-
-
+import {
+  ADD_TODO,
+  CLEAR_TODO,
+  DELETE_TODO,
+  TOGGLE_TODO,
+} from "../types/todoTypes";
 
 const initialState = {
-  todoList: [{ id: new Date().getTime(), text: "Work On Redux, completed: true "  }]
-}
+  todoList: [
+    { id: new Date().getTime(), text: "Work On Redux, completed: true " },
+  ],
+};
 
 console.log(initialState);
 
-export default (state = initialState, { type, payload }) => {
+const todoReducer = (state = initialState, { type, payload }) => {
   switch (type) {
+    case ADD_TODO:
+      return { ...state, ...payload };
+    case DELETE_TODO:
+      return { ...state, ...payload };
+    case TOGGLE_TODO:
+      return { ...state, ...payload };
+    case CLEAR_TODO:
+      return { ...state, ...payload };
 
-  case ADD_TODO :
-    return { ...state, ...payload }
-
-  default:
-    return state
+    default:
+      return state;
   }
-}
+};
 
-
-
-
-
-
-
-
-
-
+export default todoReducer;
 
 
 
