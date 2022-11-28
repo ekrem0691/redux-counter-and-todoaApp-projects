@@ -6,10 +6,10 @@ import { decrement, increment, reset } from '../../redux/actions/counterActions'
 
 const Counter = () => {
   const dispatch = useDispatch();
-  const counter = useSelector((state) => state.counter)
-  // const dispatch = useDispatch();
-  // const counter = useSelector((state) => state.counter);
-  // const counter = useSelector((state) => state.counterRed.counter);
+  // const counter = useSelector((state) => state.counter)
+  const counter = useSelector((state) => state.counterRed.counter)
+
+
 
   return (
     <div className="app">

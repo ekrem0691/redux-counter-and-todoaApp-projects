@@ -1,4 +1,4 @@
-// import { DECREMENT, INCREMENT, RESET } from "./types/counterTypes";
+// import { DECREMENT, INCREMENT, RESET } from "../types/counterTypes";
 
 // const initialState = {
 //   counter: 0,
@@ -20,11 +20,6 @@
 // };
 // export default reducer;
 
-
-
-
-
-
 // import { DECREMENT, INCREMENT, RESET } from './types/counterTypes';
 
 // const initialState = {
@@ -45,24 +40,19 @@
 // };
 // export default reducer;
 
- 
-
-
 import { createStore, combineReducers } from "redux";
 import counterReducer from "./reducers/counterReducer";
 import todoReducer from "./reducers/todoReducers";
 
 const rootReducer = combineReducers({
+  counteRed: counterReducer,
+  todoRed: todoReducer,
+});
 
-  counterReducer: counterReducer,
-  todoReducer: todoReducer,
-
-})
-
- 
-
-
-
+export const getStore = () => {
+  const store = createStore(rootReducer);
+  return store;
+};
 
 
 
@@ -72,16 +62,15 @@ const rootReducer = combineReducers({
 
 
 
-// import { createStore, combineReducers } from 'redux';
-// import counterReducer from './reducers/counterReducer';
-// import todoReducer from './reducers/todoReducers';
+
+// import { createStore, combineReducers } from "redux";
+// import counterReducer from "./reducers/counterReducer";
+// import todoReducer from "./reducers/todoReducers";
 
 // const rootReducer = combineReducers({
 //   counterRed: counterReducer,
-// todoRed: todoReducer,
-
+//  todoRed: todoReducer,
 // });
-
 // export const getStore = () => {
 //   const store = createStore(rootReducer);
 //   return store;
