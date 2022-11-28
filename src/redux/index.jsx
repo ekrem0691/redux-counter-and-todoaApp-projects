@@ -45,7 +45,7 @@ import counterReducer from "./reducers/counterReducer";
 import todoReducer from "./reducers/todoReducers";
 
 const rootReducer = combineReducers({
-  counteRed: counterReducer,
+  counterRed: counterReducer,
   todoRed: todoReducer,
 });
 
