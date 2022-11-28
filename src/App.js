@@ -1,6 +1,6 @@
 import './App.css';
-import Counter from './components/counter/Counter';
-// import Todo from './components/todo/Todo';
+// import Counter from './components/counter/Counter';
+import Todo from './components/todo/Todo';
 // import { createStore } from "redux"
 // import reducer  from './redux';
 import { Provider } from 'react-redux';
@@ -14,8 +14,8 @@ const store = getStore()
   return (
     <div className="app">
       <Provider  store={store} >
-        <Counter />
-        {/* <Todo /> */}
+        {/* <Counter /> */}
+        <Todo />
       </Provider>
     </div>
   );
