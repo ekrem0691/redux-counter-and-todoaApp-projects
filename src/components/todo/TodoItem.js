@@ -1,7 +1,7 @@
 import React from 'react';
 import okLogo from '../../assets/ok.png';
 import deleteLogo from '../../assets/delete.png';
-import { useDispatch ,useSelector} from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { toggleTodo,deleteTodo } from '../../redux/actions/todoActions';
 
 
@@ -11,10 +11,9 @@ const TodoItem = ({ completed, text, id }) => {
   
 
   // const {todoList} = useSelector((state) => state.todoRed.todoList);
-  const dispatch = useDispatch()
-
   // console.log(todoList);
-
+  
+  const dispatch = useDispatch()
   const handleToggle = (e) => {
     dispatch(toggleTodo(id))
   };
