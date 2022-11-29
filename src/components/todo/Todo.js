@@ -5,7 +5,7 @@ import "./Todo.css";
 
 const Todo = () => {
   return (
-    <div className="app">
+    <div className="app todo">
       <h2>Todo With Redux</h2>
       <TodoInput />
       <TodoList />

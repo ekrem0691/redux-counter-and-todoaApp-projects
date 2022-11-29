@@ -20,9 +20,9 @@ const todoReducer = (state = initialState, { type, payload }) => {
         todoList:[...state.todoList, {id: new Date().getTime(), text: payload , completed: false } ]
       };
     case DELETE_TODO:
-      return { ...state, ...payload };
+      return { todoList : state.todoList.filter((item) => item.id !== payload) };
     case TOGGLE_TODO:
-      return { ...state, ...payload };
+      return { todoList: state.todoList.map((item) => item.id === payload ? {...item, completed : !item.completed} : item) };
     case CLEAR_TODO:
       return { todoList : [] };
 

@@ -4,5 +4,12 @@
  align-items: center;
  justify-content: center;
  height: 100vh;
+
 }
 
+
+.todo {
+    padding-top : 5rem;
+    padding-bottom : 5rem;
+    border-top : solid 1px black
+}
