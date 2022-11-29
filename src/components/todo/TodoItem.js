@@ -10,10 +10,10 @@ const TodoItem = ({ completed, text, id }) => {
 
   
 
-  const {todoList} = useSelector((state) => state.todoRed);
+  // const {todoList} = useSelector((state) => state.todoRed.todoList);
   const dispatch = useDispatch()
 
-  console.log(todoList);
+  // console.log(todoList);
 
   const handleToggle = (e) => {
     dispatch(toggleTodo(id))
