@@ -5,14 +5,13 @@ import { addTodo } from '../../redux/actions/todoActions';
 // import { addTodo } from '../../redux/actions/todoActions';
 
 const TodoInput = () => {
+  
   const [text, setText] = useState('');
   const dispatch = useDispatch();
 
-
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(addTodo())
+    dispatch(addTodo(text))
     setText('');
   };
 

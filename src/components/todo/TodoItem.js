@@ -1,10 +1,11 @@
 import React from 'react';
 import okLogo from '../../assets/ok.png';
 import deleteLogo from '../../assets/delete.png';
+import { useDispatch } from 'react-redux';
+
 
 const TodoItem = ({ completed, text, id }) => {
   const handleToggle = () => {};
-
   const handleDelete = () => {};
 
   const styled = {
